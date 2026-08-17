@@ -60,3 +60,13 @@ async function getWeather() {
         weather.weather_code +
         "</p>";
 }
+// Default city: Delhi
+document.getElementById("city").value = "Bareilly";
+getWeather();
+
+// type enter and weather a jyega
+document.getElementById("city").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        getWeather();
+    }
+});
